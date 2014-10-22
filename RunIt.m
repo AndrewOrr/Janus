@@ -39,11 +39,12 @@ save('Time','Time')
 
 
 if matlabpool('size') == 0
-%     matlabpool open
-    parpool(2);
+    matlabpool open
+%     parpool(2);
 else
     matlabpool close
-    parpool(2);
+%     parpool(2);
+    matlabpool open
 end
 
 tic;
